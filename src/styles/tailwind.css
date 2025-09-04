@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -7,8 +7,9 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  --font-sans: "Tomorrow, sans-serif";
+  --font-display: "Inter", sans-serif;
 }
-
 @layer base {
   *,
   ::after,
@@ -19,9 +20,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

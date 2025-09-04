@@ -1,46 +1,71 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <h1>OVERSKRIFT</h1>
-    <div class="flex flex-col md:flex-row items-center gap-5 max-w-5xl mx-auto px-3 py-6">
-      <div class="flex-1">
-        <img src="https://picsum.photos/seed/picsum/400/300" alt="billede" class="rounded-lg shadow-md" />
+  <article class="bg-[#EEECE1]">
+    <section class="min-h-screen grid grid-cols-6 gap-3 p-12 font-mono">
+      <h2 class="font-sans col-span-2 flex items-center justify-center text-xl md:text-6xl">JEG</h2>
+      <img src="/public/billede1.png" alt="billede" class="col-span-2 mx-auto w-40" />
+      <h2 class="font-sans col-span-2 flex items-center justify-center text-xl md:text-6xl">DESIGNER</h2>
+
+      <img src="/public/billede2.png" alt="billede" class="col-span-2 mx-auto w-40" />
+      <h2 class="font-sans col-span-2 flex items-center justify-center text-xl md:text-6xl">OPLEVELSER</h2>
+      <img src="/public/billede3.png" alt="billede" class="col-span-1 mx-auto w-40" />
+      <img src="/public/billede4.png" alt="billede" class="col-span-1 mx-auto w-40" />
+
+      <img src="/public/billede5.png" alt="billede" class="col-span-2 mx-auto w-40" />
+      <h2 class="font-sans col-span-4 flex items-center justify-center text-xl md:text-6xl">IKKE BARE PIXELS</h2>
+    </section>
+    <section class="bg-[#405E34]">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+        <div class="flex flex-col justify-center text-white space-y-4">
+          <Text teksttype="brødtekst" stylingclasses="font-display" /> Jeg er en ambitiøs multimediedesigner med en stærk kombination af tekniske og kreative kompetencer. Med erfaring fra marketingbranchen har jeg opbygget en solid forståelse for målgrupper, kommunikation og hvordan design skaber værdi i praksis.
+          <Text teksttype="brødtekst" stylingclasses="font-display" /> Som digital designer bevæger jeg mig ubesværet mellem design og kode: jeg skaber prototyper i Figma, arbejder visuelt i Adobe og udvikler funktionelle, brugervenlige websites i VS Code. Jeg er detaljeorienteret og har en forkærlighed for struktur og linjer – men jeg søger altid at udfordre mig selv, så mine designs ikke blot er korrekte, men også nyskabende og personlige.
+          <Text teksttype="brødtekst" stylingclasses="font-display" /> Jeg trives i designprocessen, hvor idéer bliver til koncepter, og koncepter bliver til oplevelser. Min styrke ligger i at få alle elementer til at hænge sammen – fra brugeroplevelse til visuel identitet – og skabe digitale løsninger, der både er gennemtænkte og levende.
+        </div>
+
+        <div class="flex justify-center items-start">
+          <img class="w-full max-w-xs md:max-w-sm -mb-40 md:mb-0" src="/public/porttræt.png" alt="billede" />
+        </div>
       </div>
 
-      <div class="flex-1">
-        <p class="text-lg text-gray-700 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ducimus iusto quam libero id illum expedita incidunt. Culpa, cum rem in ea, temporibus voluptate quo voluptates officia recusandae adipisci illo?</p>
-        <Button>Klik!</Button>
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-col items-center gap-5 max-w-5xl mx-auto px-3 py-6">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum adipisci accusantium sunt possimus nulla consequuntur aliquam eos deleniti, itaque placeat ex repellendus maxime molestiae modi odit. Consectetur, magnam. Recusandae, in.</p>
-      <img src="https://picsum.photos/200/300?grayscale" alt="billede" />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus, in iste soluta corporis ipsum vero! Fugiat porro quis, eaque quae mollitia omnis in consectetur, accusantium dignissimos minima a asperiores.</p>
-      <Button>Klik!</Button>
-    </div>
-    <div class="flex flex-col md:flex-row items-center gap-5 max-w-5xl mx-auto px-3 py-6">
-      <div>
-        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
-      </div>
-      <div>
-        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
-      </div>
-      <div>
-        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
-      </div>
-    </div>
+      <div class="bg-[#EEECE1] h-32 md:h-0"></div>
+    </section>
 
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
+    <section class="bg-[#EEECE1] max-w-6xl mx-auto p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div class="border-2 border-black overflow-hidden">
+          <h2 class="font-sans text-2xl font-bold text-center p-4 border-b-2 border-black">Hvad jeg kan tilbyde</h2>
+
+          <div class="grid grid-cols-2 divide-x divide-y divide-black">
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/adobe1.svg" alt="ikon 1" class="w-12 h-12" />
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/adobe2.svg" alt="ikon 2" class="w-12 h-12" />
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/adobe3.svg" alt="ikon 3" class="w-12 h-12" />
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/figma.svg" alt="ikon 4" class="w-12 h-12" />
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/adobe4.svg" alt="ikon 5" class="w-12 h-12" />
+            </div>
+            <div class="flex items-center justify-center p-6">
+              <img src="/public/vscode.svg" alt="ikon 6" class="w-12 h-12" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center space-y-4 p-6">
+          <h2 class="font-sans text-2xl font-bold text-center">Opdag mit portfolio;</h2>
+          <button class="w-56 h-16 bg-[url('/public/knap.svg')] hover:bg-[url('/public/knaphover.svg')] bg-cover bg-center"> </button>
+        </div>
+      </div>
+    </section>
   </article>
 </MainLayout>
